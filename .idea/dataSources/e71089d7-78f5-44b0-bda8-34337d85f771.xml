@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="PostgreSQL - Billing@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.6">
+    <database id="1" name="Billing">
+      <object-id>16411</object-id>
+      <visible>1</visible>
+    </database>
+    <database id="2" name="postgres">
+      <object-id>12401</object-id>
+    </database>
+    <database id="3" name="Bazavaza">
+      <object-id>16394</object-id>
+    </database>
+    <schema id="4" parent="1" name="public">
+      <object-id>2200</object-id>
+      <visible>1</visible>
+      <introspection-state-number>569</introspection-state-number>
+      <introspection-timestamp>2016-11-03.21:01:17.224</introspection-timestamp>
+    </schema>
+    <schema id="5" parent="1" name="pg_catalog">
+      <object-id>11</object-id>
+    </schema>
+    <schema id="6" parent="1" name="pg_toast">
+      <object-id>99</object-id>
+    </schema>
+    <schema id="7" parent="1" name="pg_temp_1">
+      <object-id>11848</object-id>
+    </schema>
+    <schema id="8" parent="1" name="pg_toast_temp_1">
+      <object-id>11849</object-id>
+    </schema>
+    <schema id="9" parent="1" name="information_schema">
+      <object-id>12113</object-id>
+    </schema>
+    <sequence id="10" parent="4" name="auto_id_apartments">
+      <object-id>16412</object-id>
+      <state-number>557</state-number>
+    </sequence>
+    <sequence id="11" parent="4" name="auto_id_houses">
+      <object-id>16418</object-id>
+      <state-number>562</state-number>
+    </sequence>
+    <sequence id="12" parent="4" name="auto_id_residents">
+      <object-id>16420</object-id>
+      <state-number>563</state-number>
+    </sequence>
+    <sequence id="13" parent="4" name="auto_id_sex">
+      <object-id>16422</object-id>
+      <state-number>564</state-number>
+    </sequence>
+    <table id="14" parent="4" name="apartments">
+      <object-id>16414</object-id>
+      <comment>квартиры</comment>
+      <state-number>558</state-number>
+    </table>
+    <table id="15" parent="4" name="houses">
+      <object-id>16424</object-id>
+      <comment>Дома</comment>
+      <state-number>565</state-number>
+    </table>
+    <table id="16" parent="4" name="residents">
+      <object-id>16431</object-id>
+      <comment>жильцы</comment>
+      <state-number>567</state-number>
+    </table>
+    <table id="17" parent="4" name="sex">
+      <object-id>16438</object-id>
+      <comment>пол</comment>
+      <state-number>569</state-number>
+    </table>
+    <column id="18" parent="14" name="id">
+      <state-number>558</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;auto_id_apartments&apos;::regclass)</default-expression>
+    </column>
+    <column id="19" parent="14" name="houseID">
+      <comment>ссылка на дома</comment>
+      <state-number>558</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="20" parent="14" name="number">
+      <comment>номер квартиры</comment>
+      <state-number>558</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="21" parent="14" name="square">
+      <state-number>558</state-number>
+      <data-type>double precision|0</data-type>
+    </column>
+    <column id="22" parent="15" name="id">
+      <state-number>565</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;auto_id_houses&apos;::regclass)</default-expression>
+    </column>
+    <column id="23" parent="15" name="address">
+      <state-number>565</state-number>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="24" parent="15" name="floors">
+      <state-number>565</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="25" parent="15" name="buildYear">
+      <state-number>565</state-number>
+      <data-type>date|0</data-type>
+    </column>
+    <column id="26" parent="16" name="id">
+      <state-number>567</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;auto_id_residents&apos;::regclass)</default-expression>
+    </column>
+    <column id="27" parent="16" name="apartmentID">
+      <state-number>567</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="28" parent="16" name="name">
+      <state-number>567</state-number>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="29" parent="16" name="secondName">
+      <state-number>567</state-number>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="30" parent="16" name="lastName">
+      <state-number>567</state-number>
+      <data-type>text|0</data-type>
+    </column>
+    <column id="31" parent="16" name="birthday">
+      <state-number>567</state-number>
+      <data-type>date|0</data-type>
+    </column>
+    <column id="32" parent="16" name="sexID">
+      <state-number>567</state-number>
+      <data-type>integer|0</data-type>
+    </column>
+    <column id="33" parent="17" name="id">
+      <state-number>569</state-number>
+      <mandatory>1</mandatory>
+      <data-type>integer|0</data-type>
+      <default-expression>nextval(&apos;auto_id_sex&apos;::regclass)</default-expression>
+    </column>
+    <column id="34" parent="17" name="title">
+      <state-number>569</state-number>
+      <data-type>text|0</data-type>
+    </column>
+  </database-model>
+</dataSource>
